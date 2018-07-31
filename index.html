@@ -16,26 +16,22 @@
 		  inputValue: ''
 		}
 		
-		this.handleChange = this.handleChange.bind(this)
+		this.handleChange = this.handleChange.bind(this);
 	  };
 	  
 	  handleChange(event) {
-	    this.setState() {
+	    this.setState({
 		  input: event.target.value
-		}
+		}); 
 	  }
 	  
 	  render() {
 	    return (
-	      <Editor 
-	        input={this.state.inputValue} 
-	        handleChange={this.state.handleChange} />
-	      <Previewer 
-	        input={this.state.inputValue} />
+	      <p>Test</p>
 	    );
 	  }
 	  
-	}
+	};
 	
 	class Editor extends React.Component {
 	  constructor(props) {
@@ -46,13 +42,11 @@
 	    return (
 	      <div>
 	        <h3>Editor</h3>
-	        <input 
-	          value={this.props.input} 
-	          onChange={this.props.handleChange} />
+	        <textarea id="editor"></textarea>
 	      </div>
 	    ); 
 	  }
-	}
+	};
 	
 	class Previewer extends React.Component {
 	  constructor(props) {
@@ -61,28 +55,32 @@
 	  
 	  render() {
 	    return (
-	      <div>
+	      <div id="preview">
 		    <h3>Previewer</h3>
-		    <p>{this.props.input}</p>
+		    <p>Test</p>
 		  </div>
-	    )
+	    );
 	  }
-	}
+	};
 	
     class Greeting extends React.Component {
       render() {
 	    return (<p>Hello World</p>);
 	  }
-    }
+    };
     
     ReactDOM.render(
-      <Editor />, document.getElementById('editor')
+      <Editor />, document.getElementById('editor-section')
+    );
+    
+    ReactDOM.render(
+      <Previewer />, document.getElementById('preview-section')
     );
   </script>
 </head>
 <body>
 	<h1>Mark Down, The Previewer</h1>
-	<textarea id="editor"></textarea>
-	<div id="preview"></div>
+	<div id="editor-section"></div>
+	<div id="preview-section"></div>
 </body>
 </html>
