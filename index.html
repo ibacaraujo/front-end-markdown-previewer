@@ -29,22 +29,43 @@
 	    return (
 	      <Editor 
 	        input={this.state.inputValue} 
-	        handleChange={this.state.handleChange}/>
-	      <Previewer />
-	    )
+	        handleChange={this.state.handleChange} />
+	      <Previewer 
+	        input={this.state.inputValue} />
+	    );
 	  }
 	  
 	}
 	
-	class Editor extends.ReactComponent {
+	class Editor extends React.Component {
 	  constructor(props) {
 	    super(props);
 	  };
 	  
 	  render() {
 	    return (
-	      <input value={this.props.input} onChange={this.props.handleChange}/>
-	    )  
+	      <div>
+	        <h3>Editor</h3>
+	        <input 
+	          value={this.props.input} 
+	          onChange={this.props.handleChange} />
+	      </div>
+	    ); 
+	  }
+	}
+	
+	class Previewer extends React.Component {
+	  constructor(props) {
+	    super(props);
+	  }
+	  
+	  render() {
+	    return (
+	      <div>
+		    <h3>Previewer</h3>
+		    <p>{this.props.input}</p>
+		  </div>
+	    )
 	  }
 	}
 	
@@ -55,7 +76,7 @@
     }
     
     ReactDOM.render(
-      <Greeting />, document.getElementById('preview')
+      <Editor />, document.getElementById('editor')
     );
   </script>
 </head>
