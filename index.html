@@ -27,11 +27,25 @@
 	  
 	  render() {
 	    return (
-	      <Editor />
+	      <Editor 
+	        input={this.state.inputValue} 
+	        handleChange={this.state.handleChange}/>
 	      <Previewer />
 	    )
 	  }
 	  
+	}
+	
+	class Editor extends.ReactComponent {
+	  constructor(props) {
+	    super(props);
+	  };
+	  
+	  render() {
+	    return (
+	      <input value={this.props.input} onChange={this.props.handleChange}/>
+	    )  
+	  }
 	}
 	
     class Greeting extends React.Component {
