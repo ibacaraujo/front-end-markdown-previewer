@@ -17,19 +17,19 @@
 		}
 		
 		this.handleChange = this.handleChange.bind(this);
-	  };
+	  }
 	  
 	  handleChange(event) {
 	    this.setState({
-		  input: event.target.value
+		  inputValue: event.target.value
 		}); 
 	  }
 	  
 	  render() {
 	    return (
 	      <div>
-	        <Editor input={this.state.inputValue} handleChange={this.handleChange}/>
-	        <Previewer input={this.state.inputValue}/>
+	        <Editor input={this.state.inputValue} handleChange={this.handleChange} />
+            <Previewer input={this.state.inputValue} />
 	      </div>
 	    );
 	  }
@@ -67,12 +67,6 @@
 	    );
 	  }
 	};
-	
-    class Greeting extends React.Component {
-      render() {
-	    return (<p>Hello World</p>);
-	  }
-    };
     
     ReactDOM.render(
       <App />, document.getElementById('app')
