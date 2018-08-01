@@ -28,8 +28,8 @@
 	  render() {
 	    return (
 	      <div>
-	        <Editor />
-	        <Previewer />
+	        <Editor input={this.state.inputValue} handleChange={this.handleChange}/>
+	        <Previewer/>
 	      </div>
 	    );
 	  }
@@ -45,7 +45,9 @@
 	    return (
 	      <div>
 	        <h3>Editor</h3>
-	        <textarea id="editor"></textarea>
+	        <textarea id="editor" 
+	          value={this.props.input} 
+	          onChange={this.props.handleChange} />
 	      </div>
 	    ); 
 	  }
@@ -60,7 +62,7 @@
 	    return (
 	      <div id="preview">
 		    <h3>Previewer</h3>
-		    <p>Test</p>
+		    <p>{this.props.input}</p>
 		  </div>
 	    );
 	  }
