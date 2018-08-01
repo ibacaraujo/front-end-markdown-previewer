@@ -27,7 +27,7 @@
 	  
 	  render() {
 	    return (
-	      <p>Test</p>
+	      <Editor />
 	    );
 	  }
 	  
@@ -70,17 +70,12 @@
     };
     
     ReactDOM.render(
-      <Editor />, document.getElementById('editor-section')
-    );
-    
-    ReactDOM.render(
-      <Previewer />, document.getElementById('preview-section')
+      <App />, document.getElementById('app')
     );
   </script>
 </head>
 <body>
 	<h1>Mark Down, The Previewer</h1>
-	<div id="editor-section"></div>
-	<div id="preview-section"></div>
+	<div id="app"></div>
 </body>
 </html>
