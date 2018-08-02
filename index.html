@@ -58,7 +58,7 @@
 	  }
 
           getMarkdown() {
-            var rawMarkup = marked(this.prop.input, {sanitize: true});
+            var rawMarkup = marked(this.props.input, {sanitize: true});
             return { __html: rawMarkup};
           }
 	  
@@ -66,7 +66,7 @@
 	    return (
 	      <div>
 	        <h3>Previewer</h3>
-		<p id="preview">{this.props.input}}</p>
+		<div id="preview" dangerouslySetInnerHTML={this.getMarkdown()} />
 	      </div>
 	    );
 	  }
