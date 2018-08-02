@@ -28,7 +28,7 @@
 	    return (
 	      <div>
 	        <Editor input={this.state.inputValue} handleChange={this.handleChange} />
-		<Previewer input={marked(this.state.inputValue, {sanitize: true})} />
+		<Previewer input={this.state.inputValue} />
 	      </div>
 	    );
 	  }
@@ -56,12 +56,17 @@
 	  constructor(props) {
 	    super(props);
 	  }
+
+          getMarkdown() {
+            var rawMarkup = marked(this.prop.input, {sanitize: true});
+            return { __html: rawMarkup};
+          }
 	  
 	  render() {
 	    return (
 	      <div>
 	        <h3>Previewer</h3>
-	        <p id="preview">{this.props.input}</p>
+		<p id="preview">{this.props.input}}</p>
 	      </div>
 	    );
 	  }
