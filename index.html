@@ -28,7 +28,7 @@
 	    return (
 	      <div>
 	        <Editor input={this.state.inputValue} handleChange={this.handleChange} />
-            <Previewer input={this.state.inputValue} />
+		<Previewer input={marked(this.state.inputValue, {sanitize: true})} />
 	      </div>
 	    );
 	  }
