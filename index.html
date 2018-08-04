@@ -44,7 +44,7 @@
 	  render() {
 	    return (
 	      <div>
-	        <h3>Editor</h3>
+	        <h3 id="editor-title">Editor</h3>
 	        <textarea 
                   id="editor" 
 	          value={this.props.input}
@@ -68,7 +68,7 @@
 	  render() {
 	    return (
 	      <div>
-	        <h3>Previewer</h3>
+	        <h3 id="preview-title">Previewer</h3>
 		<div id="preview" dangerouslySetInnerHTML={this.getMarkdown()} />
 	      </div>
 	    );
@@ -83,6 +83,10 @@
     #markdown-title {
       font-family: 'Source Code Pro', monospace;
     }
+    
+    #editor-title {
+	  font-family: 'Source Code Pro', monospace;
+	}
   </style>
 </head>
 <body>
