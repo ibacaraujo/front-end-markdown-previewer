@@ -30,7 +30,7 @@
 	    return (
 	      <div>
 	        <Editor input={this.state.inputValue} handleChange={this.handleChange} />
-		<Previewer input={this.state.inputValue} />
+		    <Previewer input={this.state.inputValue} />
 	      </div>
 	    );
 	  }
@@ -45,19 +45,11 @@
 	  render() {
 	    return (
 	      <div>
-<<<<<<< HEAD
 		    <h3 id="editor-title">Editor</h3>
-=======
-		<h3 id="editor-title"><strong>Editor</strong></h3>
->>>>>>> 3ee3662872436f28a64eae46da090f240389fe84
 	        <textarea 
               id="editor" 
 	          value={this.props.input}
-<<<<<<< HEAD
               style={{width: '95%', height: '150px'}} 
-=======
-                  style={{width: '95%', height: '150px'}} 
->>>>>>> 3ee3662872436f28a64eae46da090f240389fe84
 	          onChange={this.props.handleChange} />
 	      </div>
 	    ); 
@@ -77,13 +69,8 @@
 	  render() {
 	    return (
 	      <div>
-<<<<<<< HEAD
-		    <h3 id="preview-title">Previewer</h3>
+		    <h3 id="preview-title"><strong>Previewer</strong></h3>
 		    <div id="preview" dangerouslySetInnerHTML={this.getMarkdown()} />
-=======
-		<h3 id="preview-title"><strong>Previewer</strong></h3>
-		<div id="preview" dangerouslySetInnerHTML={this.getMarkdown()} />
->>>>>>> 3ee3662872436f28a64eae46da090f240389fe84
 	      </div>
 	    );
 	  }
@@ -114,6 +101,7 @@
 	
     #editor {
       font-family: 'Source Code Pro', monospace;
+      font-size: 35px;
     }
   </style>
 </head>
