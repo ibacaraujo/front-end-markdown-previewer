@@ -14,7 +14,7 @@
 	  constructor(props) {
 	    super(props);
 	    this.state = {
-		  inputValue: "# This is a title\n## This is a subtitle\nI live [here](https://github.com/ibacaraujo/front-end-markdown-previewer)\nI know how to read code:\n```javascript\n var greetings = 'Welcome to my previews!'```\nMy component hierarchy is the following:\n- App\n- Editor\n- Previewer\n> Feel free to type in my Editor. My Previewer is going to show you the text in a marked style.\nI am from:\n![freeCodeCamp](https://shifter.sapo.pt/wp-content/uploads/2018/01/freecodecamp.png)\n\n**Why don't you try to create your own Markdown Previewer? You can do it!**"
+		  inputValue: "# This is a title\n## This is a subtitle\nI live [here](https://github.com/ibacaraujo/front-end-markdown-previewer)\n\nI know how to read code:\n```javascript\n var greetings = 'Welcome to my previews!'```\nMy component hierarchy is the following:\n\nApp\n  - Editor\n    - Previewer\n> Feel free to type in my Editor. My Previewer is going to show you the text in a marked style.\n\nI am from:\n\n![freeCodeCamp](https://shifter.sapo.pt/wp-content/uploads/2018/01/freecodecamp.png)\n\n**Why don't you try to create your own Markdown Previewer? You can do it!**"
 		}
 		this.handleChange = this.handleChange.bind(this);
 	  }
@@ -110,6 +110,15 @@
     #preview {
 	  margin-left: 37px;
 	  margin-right: 37px;
+	}
+	
+	ul {
+	  list-style-position: inside;
+	}
+	
+	img {
+	  width: 35%;
+	  height: 35%;
 	}
   </style>
 </head>
